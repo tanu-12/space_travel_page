@@ -58,6 +58,10 @@ picture {
 body {
     line-height: 1.5;
     min-height: 100vh;
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-dark));
 }
 
 /* make images easier to work with */
