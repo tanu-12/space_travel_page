@@ -238,3 +238,13 @@ select {
     color: hsl(var(--clr-light) / .25);
 
 }
+
+.large-button {
+    padding: 0 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
