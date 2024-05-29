@@ -284,7 +284,7 @@ select {
 }
 
 .underline-indicators>#active_r {
-    border-bottom: 1px solid hsl(var(--clr-white) / 1);
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0.3);
 }
 
 .underline-indicators>li:hover,
