@@ -108,7 +108,7 @@
             <div>
                 <nav>
                     <ul class="navigation-primary  underline-indicators flex">
-                        <li id="active_r"><a class="uppercase text-white letter-spacing-2" ; href=" #"><span>01
+                        <li class="active_r"><a class="uppercase text-white letter-spacing-2" ; href=" #"><span>01
                                 </span>Active</a></li>
                         <li><a class="  uppercase text-white letter-spacing-2" href="#"><span>02
                                 </span>Hovered</a></li>
@@ -120,7 +120,7 @@
 
 
 
-            <div class="flex">
+            <div class="flex" style="justify-content: space-evenly;">
                 <div style=" margin-top: 5rem;">
                     <a href="#" class="large-button bg-white text-dark">Explore</a>
                 </div>
@@ -128,10 +128,13 @@
                 <div style="margin-bottom: 50vh">
 
 
-                    <div class="underline-indicators">
-                        <button class="uppercase text-accent bg-dark letter-spacing-2">Moon</button>
-                        <button class="uppercase text-accent bg-dark letter-spacing-2">Mars</button>
-                        <button class="uppercase text-accent bg-dark letter-spacing-2">Europa</button>
+                    <div class=" tab-nav underline-indicators flex">
+                        <button aria-selected="true"
+                            class=" active_r uppercase text-accent ff-sans-cond  bg-dark letter-spacing-2">Moon</button>
+                        <button aria-selected="false"
+                            class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2">Mars</button>
+                        <button aria-selected="false"
+                            class="uppercase text-accent bg-dark ff-sans-cond letter-spacing-2">Europa</button>
 
 
                     </div>

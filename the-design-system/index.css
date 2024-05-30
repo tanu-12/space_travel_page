@@ -278,30 +278,43 @@ select {
     margin-right: .5em;
 }
 
-.underline-indicators>* {
+.underline-indicators>li {
 
     padding: var(--underline-gap, 1rem) 0;
     border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
 
 
-.underline-indicators>#active_r {
-    border-bottom: .2rem solid hsl(var(--clr-white) / 0.3);
+.underline-indicators>.active_r,
+.underline-indicators>[aria-selected="true"] {
+    border-bottom: .2rem solid hsl(var(--clr-white) / 1);
 }
 
 
 
-.underline-indicators>*:hover,
-.underline-indicators>*:focus {
+.underline-indicators>li:hover,
+.underline-indicators>li:focus {
     border-color: hsl(var(--clr-white) / .5);
 }
 
-/* 
-.underline-indicators>* ::hover {
-    border-color: hsl(var(--clr-white) / .5);
-} */
-
-
-button {
-    border: none;
+.underline-indicators>button {
+    cursor: pointer;
+    border: 0;
+    padding: var(--underline-gap, 1rem) 0;
+    border-bottom: .2rem solid hsl(var(--clr-white) / 0);
 }
+
+
+
+
+
+.underline-indicators>button:hover,
+.underline-indicators>button:focus {
+    border-color: hsl(var(--clr-white) / .5);
+}
+
+.tab-nav {
+    --gap: 2rem;
+}
+
+.tab-nav button {}
