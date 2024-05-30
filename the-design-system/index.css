@@ -317,4 +317,23 @@ select {
     --gap: 2rem;
 }
 
-.tab-nav button {}
+.slider>* {
+    cursor: pointer;
+    padding: .5em;
+    aspect-ratio: 1;
+    border: 0;
+    border-radius: 50%;
+    background-color: hsl(var(--clr-white) /0.25);
+
+}
+
+.slider>button:hover,
+.slider>button:focus {
+
+    background-color: hsl(var(--clr-white) /0.5);
+}
+
+
+.slider>[aria-selected="true"] {
+    background-color: hsl(var(--clr-white) /1);
+}
