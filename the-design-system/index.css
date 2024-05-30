@@ -337,3 +337,26 @@ select {
 .slider>[aria-selected="true"] {
     background-color: hsl(var(--clr-white) /1);
 }
+
+.numbers>* {
+    cursor: pointer;
+    padding: 0;
+    border: solid 1px hsl(var(--clr-white) /.25);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-white));
+}
+
+.numbers>button:hover,
+.numbers>button:focus {
+
+    border: solid 1px hsl(var(--clr-white) / 1);
+}
+
+
+.numbers>[aria-selected="true"] {
+    background-color: hsl(var(--clr-white) /1);
+    color: hsl(var(--clr-dark));
+
+}
