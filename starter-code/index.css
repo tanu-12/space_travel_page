@@ -29,7 +29,7 @@
 
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 35em) {
     :root {
         --fs-800: 5rem;
         --fs-700: 2.5rem;
@@ -40,7 +40,7 @@
     }
 }
 
-@media (min-width: 45rem) {
+@media (min-width: 45em) {
     :root {
         /* font-sizes */
         --fs-800: 6.25rem;
@@ -98,6 +98,8 @@ body {
     background-color: hsl(var(--clr-dark));
     display: grid;
     grid-template-rows: min-content 1fr;
+
+
 }
 
 /* make images easier to work with */
@@ -162,7 +164,7 @@ select {
 
     display: grid;
     place-items: center;
-    padding-inline: 1em;
+    padding-inline: 1rem;
 
 }
 
@@ -484,7 +486,7 @@ select {
 }
 
 /* page specific background image */
-body {
+html {
     background-size: cover;
     background-position: bottom center;
 
