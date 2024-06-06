@@ -168,7 +168,7 @@ select {
 
 }
 
-.grid-container>* {
+.grid-container * {
     max-width: 50ch;
 }
 
@@ -179,7 +179,7 @@ select {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
 
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
 
     }
 
@@ -486,7 +486,7 @@ select {
 }
 
 /* page specific background image */
-html {
+body {
     background-size: cover;
     background-position: bottom center;
 
@@ -499,6 +499,7 @@ html {
 @media (min-width:35rem) {
 
     .home {
+        background-position: center center;
         background: url(./assets/home/background-home-tablet.jpg);
     }
 
