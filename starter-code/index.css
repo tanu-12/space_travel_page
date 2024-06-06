@@ -29,7 +29,7 @@
 
 }
 
-@media (min-width: 35em) {
+@media (min-width: 35rem) {
     :root {
         --fs-800: 5rem;
         --fs-700: 2.5rem;
@@ -40,7 +40,7 @@
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 45rem) {
     :root {
         /* font-sizes */
         --fs-800: 6.25rem;
@@ -158,29 +158,43 @@ select {
 }
 
 .grid-container {
+    text-align: center;
 
     display: grid;
+    place-items: center;
+    padding-inline: 1em;
 
+}
+
+.grid-container>* {
+    max-width: 50ch;
 }
 
 
 
 @media (min-width:45em) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
 
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);
 
     }
 
     .grid-container>*:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
 
     .grid-container>*:last-child {
         grid-column: 3;
-        outline: 1px solid red;
+
+
+    }
+
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+
 
     }
 
@@ -315,7 +329,7 @@ select {
 .large-button {
     position: relative;
     z-index: 1;
-
+    font-size: 2rem;
     display: inline-grid;
     place-items: center;
     padding: 0 2em;
@@ -466,5 +480,34 @@ select {
 .numbers>[aria-selected="true"] {
     background-color: hsl(var(--clr-white) /1);
     color: hsl(var(--clr-dark));
+
+}
+
+/* page specific background image */
+body {
+    background-size: cover;
+    background-position: bottom center;
+
+}
+
+.home {
+    background: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width:35rem) {
+
+    .home {
+        background: url(./assets/home/background-home-tablet.jpg);
+    }
+
+
+}
+
+@media (min-width:45rem) {
+
+    .home {
+        background: url(./assets/home/background-home-desktop.jpg);
+    }
+
 
 }
