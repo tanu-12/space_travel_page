@@ -390,7 +390,7 @@ select {
 
 
 .navigation-primary {
-    /* --gap: 8rem; */
+    --gap: clamp(1.5rem, 3vw, 3.5rem);
     --underline-gap: 2rem;
 
     list-style: none;
@@ -403,6 +403,15 @@ select {
 
 
 
+}
+
+.navigation-primary a {
+    text-decoration: none;
+}
+
+.navigation-primary a>span {
+    font-weight: 700;
+    margin-right: .5em;
 }
 
 .mobile-tab {
@@ -421,6 +430,29 @@ select {
 
 }
 
+.logo {
+    margin: 1.5rem clamp(1.5rem, 2vw, 3.5rem);
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hl {
+    display: none;
+    position: relative;
+    height: 1px;
+    border: 0;
+    width: 50%;
+    right: 30rem;
+    left: .5rem;
+    z-index: 1000;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
 @media (max-width:35rem) {
     .navigation-primary {
         /* --gap: 8rem; */
@@ -433,18 +465,12 @@ select {
         flex-direction: column;
         position: fixed;
         transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
     }
 
     .navigation-primary[data-visible="true"] {
 
         transform: translateX(0);
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .navigation-primary[data-visible="false"] {
-
-        transform: translateX(100%);
-        transition: transform 0.4s ease-in-out;
     }
 
     .mobile-tab {
@@ -457,12 +483,20 @@ select {
         background: transparent;
         background-image: url("./assets/shared/icon-hamburger.svg");
         background-repeat: no-repeat;
+        background-position: center;
         width: 2em;
         aspect-ratio: 1;
         border: 0;
     }
 
+    .mobile-tab[aria-expanded="true"] {
+        background-image: url(./assets/shared/icon-close.svg);
+    }
 
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
 
 
 
@@ -479,16 +513,18 @@ select {
 
 }
 
+@media (min-width:35em) and (max-width:45em) {
+    .navigation-primary {
+        padding-inline: 1rem;
+    }
 
-
-.navigation-primary a {
-    text-decoration: none;
+    .navigation-primary a>span {
+        display: none;
+    }
 }
 
-.navigation-primary a>span {
-    font-weight: 700;
-    margin-right: .5em;
-}
+
+
 
 .underline-indicators>li {
 
@@ -604,5 +640,8 @@ body {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
 
+    .hl {
+        display: block;
+    }
 
 }

@@ -6,12 +6,12 @@ hamburgerButton.addEventListener("click", function () {
     let data = navBar.getAttribute("data-visible");
     if (data === "false") {
         navBar.setAttribute("data-visible", true);
-        hamburgerButton.style.backgroundImage = "url('./assets/shared/icon-close.svg')";
-        console.log(data);
+        hamburgerButton.setAttribute("aria-expanded", true);
+
     }
     else {
         navBar.setAttribute("data-visible", false);
-        hamburgerButton.style.backgroundImage = "url('./assets/shared/icon-hamburger.svg')";
+        hamburgerButton.setAttribute("aria-expanded", false);
     }
 
 
