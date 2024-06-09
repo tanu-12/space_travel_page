@@ -439,24 +439,11 @@ select {
     align-items: center;
 }
 
-.hl {
-    display: none;
-    position: relative;
-    height: 1px;
-    border: 0;
-    width: 50%;
-    right: 30rem;
-    left: .5rem;
-    z-index: 1000;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
 
 @media (max-width:35rem) {
     .navigation-primary {
         /* --gap: 8rem; */
-        --underline-gap: 0.2rem;
+        --underline-gap: 0.5rem;
         inset: 0 0 0 20%;
         z-index: 1000;
         list-style: none;
@@ -513,7 +500,13 @@ select {
 
 }
 
-@media (min-width:35em) and (max-width:45em) {
+@media (min-width: 35em) {
+    .navigation-primary {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+}
+
+@media (min-width:35em) and (max-width:44.999em) {
     .navigation-primary {
         padding-inline: 1rem;
     }
@@ -523,6 +516,31 @@ select {
     }
 }
 
+/*  kevin solution that is not working for me 
+
+@media (min-width: 45em) {
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 80%;
+        margin-right: -2.5rem;
+        background: hsl(var(--clr-white) / .25);
+        order: 1;
+    }
+
+    nav {
+        order: 2;
+    }
+
+    .navigation-primary {
+        margin-block: 2rem;
+    }
+
+
+} */
 
 
 
@@ -640,8 +658,5 @@ body {
         background-image: url(./assets/home/background-home-desktop.jpg);
     }
 
-    .hl {
-        display: block;
-    }
 
 }
