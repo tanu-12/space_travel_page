@@ -405,6 +405,17 @@ select {
 
 }
 
+.hl {
+    position: fixed;
+    left: 5%;
+    height: 1px;
+    width: 40%;
+    border: 1px solid hsl(var(--clr-white) / .07);
+    margin-right: -3.5rem;
+    z-index: -1;
+}
+
+
 .navigation-primary a {
     text-decoration: none;
 }
@@ -454,7 +465,8 @@ select {
         transform: translateX(100%);
         transition: transform 500ms ease-in-out;
     }
-
+.h1{display:none;}
+    
     .navigation-primary[data-visible="true"] {
 
         transform: translateX(0);
